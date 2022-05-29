@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
     --textcolor: #000;
     --scndcolor: #a09dab;
     --maincolor: #f75023;
-    --bigfont: 5rem;
+    --bigfont: 4rem;
     --h2font: 3rem;
     --pfont: 1.1rem;
 }

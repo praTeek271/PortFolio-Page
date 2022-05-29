@@ -6,11 +6,5 @@ window.addEventListener("scroll",function(){
 
 var button = document.getElementsByClassName("button");
 var textBox = document.getElementsByClassName("email");
-textBox.addEventListener("keyup", function (event) {
 
-    // Checking if key pressed is ENTER or not
-    // if the key pressed is ENTER
-    // click listener on button is called
-    if (event.keyCode == 13) {
-        button.click();}
-    });
+
