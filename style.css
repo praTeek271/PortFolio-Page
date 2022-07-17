@@ -28,6 +28,12 @@ body {
     color: var(--textcolor);
 }
 
+.dark-mode{
+    --bgcolor:black;
+    --textcolor:white;
+    --maincolor:#F900BF;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -55,6 +61,9 @@ header {
     color: var(--textcolor);
     font-weight: 500;
     padding: 10px 20px;
+    display: flex;
+    padding-top: 0;
+    text-align: center;
 }
 
 .navlist a:hover {
@@ -247,9 +256,15 @@ section {
     box-shadow: 18px 0px 87px 0px #cdcaca;
     border-radius: 10px;
     will-change: transform;
-    transform: perspective(1000px) rotateY(4.80deg) rotateX(10.23deg) scale3d(1.05, 1.05, 1.05);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale3d(1.05, 1.05, 1.05);
 }
 
+.sub-box:first-child:hover{
+    transform: perspective(1000px) rotateY(4.80deg) rotateX(10.23deg)  rotateZ(3deg) scale3d(1.05, 1.05, 1.05);
+}
+.sub-box:last-child:hover{
+    transform: perspective(1000px) rotateY(4.80deg) rotateX(10.23deg) rotateZ(-3deg)scale3d(1.05, 1.05, 1.05);
+}
 /* ------------------------about section------------------ */
 
 .about {
@@ -426,7 +441,7 @@ section {
 .contact {
     background: #d302da;
     width: 64%;
-    height: auto;
+    height: 279px;
     margin: 100px auto;
     padding: 70px 150px;
     display: flex;
