@@ -191,7 +191,7 @@ section {
 
 .home-img-me img {
     width: 70%;
-    /* height: 391px; */
+    height: auto;
     max-width: 100%;
     height: auto;
     min-height: 213px;
