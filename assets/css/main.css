@@ -620,7 +620,7 @@ body {
   width: 5rem;
   height: 5rem;
   background-color: var(--color-white);
-  color: var(--color-title);
+  color: black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
