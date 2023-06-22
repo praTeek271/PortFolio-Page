@@ -301,7 +301,7 @@
             </div>
         </section>
 
-        
+
         <!--===================== Portfolio =====================-->
         <section id="portfolio" class="portfolio section">
             <div class="section__header container">
@@ -467,19 +467,19 @@
                 <h2 class="section__title">Have a Project Idea / Want to Contact me? Feel Free to Contact</h2>
             </div>
             <div class="d-grid contact__wrapper container">
-                <form action="" class="contact__form">
+                <form action="assets/php/send_email.php" method="POST" class="contact__form">
                     <div class="form__group">
-                        <label for="" class="form__label">Name</label>
-                        <input type="text" class="form__input" placeholder="Enter your name" required>
+                        <label for="name" class="form__label">Name</label>
+                        <input type="text" name="name" id="name" class="form__input" placeholder="Enter your name" required>
                     </div>
                     <div class="form__group">
-                        <label for="" class="form__label">Email</label>
-                        <input type="email" class="form__input" placeholder="Enter your email" required>
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" name="email" id="email" class="form__input" placeholder="Enter your email" required>
                     </div>
                     <div class="form__group">
                         <label for="" class="form__label">Message</label>
-                        <textarea class="form__input form__textarea"
-                            placeholder="Tell me about your project"></textarea>
+                        <textarea class="form__input form__textarea" id="message" name="message" 
+                            placeholder="Wanna talk to me ........"></textarea>
                     </div>
                     <button type="submit" class="btn btn--primary">
                         <i class="ri-send-plane-line"></i><a style="color:white">Send Message</a>
@@ -583,6 +583,8 @@
 
     <!--=================== Main JS ====================-->
     <script src="assets/js/main.js"></script>
+       
+    
     <script>
         $(document).ready(function () {
             setTimeout(function () {
