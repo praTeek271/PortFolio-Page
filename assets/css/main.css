@@ -171,12 +171,14 @@ body {
 }
 
 .dark-theme::-webkit-scrollbar {
-  background-color: var(--color-gray);
+  background-color: rgba(67, 67, 67, 0);
 }
 
 .dark-theme::-webkit-scrollbar-thumb {
   background-color: var(--color-gray-light);
 }
+
+
 
 /* Reausable CSS Classes
 --------------------------------------------------------------*/
@@ -971,7 +973,7 @@ body {
 /* Scrollbar
 --------------------------------------------------------------*/
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 5px;
   background-color: var(--color-gray-lighten);
 }
 
@@ -1123,7 +1125,7 @@ body {
 /* Preloader */
 .container-preloader {
   align-items: center;
-  cursor:pointer;
+  cursor: none;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -1149,6 +1151,8 @@ body {
   height: 9em;
   margin: 0 auto 3.5em auto;
   width: 9em;
+  user-select: none;
+  cursor:none;
 }
 
 /* Loading text */
@@ -1156,6 +1160,7 @@ body {
   font: bold 5em 'Montserrat', sans-serif;
   text-align: center;
   user-select: none;
+  cursor:progress;
 }
 
 .container-preloader .animation-preloader .txt-loading .characters:before {
@@ -1167,11 +1172,15 @@ body {
   position: absolute;
   top: 0;
   transform: rotateY(-90deg);
+  user-select: none;
+  cursor:none;
 }
 
 .container-preloader .animation-preloader .txt-loading .characters {
   color: rgba(0, 0, 0, 0.2);
   position: relative;
+  user-select: none;
+  cursor:none;
 }
 
 .container-preloader .animation-preloader .txt-loading .characters:nth-child(2):before {
