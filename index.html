@@ -13,6 +13,13 @@
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,300;1,500;1,600&display=swap"
         rel="stylesheet">
     <title>Prateek271</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS with your public key
+            emailjs.init('nCrgwK4dKw6jKjtUx');
+        })();
+    </script>
 </head>
 
 <body class="">
@@ -194,31 +201,27 @@
 
         </div>
     </section>
-    <!----------------Contact-Me----------------------->
+    <!---------- test------->
     <section class="contact" id="contact">
         <div class="container">
             <div class="center">
                 <h3>Let's talk about anything</h3>
                 <p>Don't like forms? Send me an email.</p>
             </div>
-            <div class="action">
-                <span><a href="http://gmail.com">prateekasmegmail.com</a></span>
-                <i></i>
-            </div>
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Prateek Kumar Singh", "a Programmer", "a Developer", "a Creator"],
-            typeSpeed: 150,
-            backSpeed: 180,
-            loop: true
-        });
-
-
-    </script>
+    <!----------------Contact-Me----------------------->
+    
 
 </body>
 
