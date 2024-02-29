@@ -92,6 +92,13 @@ img {
   max-width: 100%;
   display: block;
 }
+.portfolio__img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 20px;
+
+}
 
 input,
 textarea,
@@ -991,7 +998,7 @@ body {
 /* Preloader */
 .container-preloader {
   align-items: center;
-  cursor: none;
+  cursor: wait;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -1018,7 +1025,7 @@ body {
   margin: 0 auto 3.5em auto;
   width: 9em;
   user-select: none;
-  cursor:none;
+  cursor:wait;
 }
 
 /* Loading text */
@@ -1039,14 +1046,14 @@ body {
   top: 0;
   transform: rotateY(-90deg);
   user-select: none;
-  cursor:none;
+  cursor:wait;
 }
 
 .container-preloader .animation-preloader .txt-loading .characters {
   color: rgba(0, 0, 0, 0.2);
   position: relative;
   user-select: none;
-  cursor:none;
+  cursor:wait;
 }
 
 .container-preloader .animation-preloader .txt-loading .characters:nth-child(2):before {
