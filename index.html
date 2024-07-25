@@ -89,6 +89,136 @@
                 transform: translate(0, 0);
             }
         }
+
+        .certi_grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 150px;
+        }
+
+        .right_container {
+            align-content: end;
+        }
+
+
+
+        .cert_img {
+            width: 97%;
+            height: auto;
+            transition: ease;
+            border-radius: 5%;
+            will-change: transform, opacity;
+        }
+
+        .cert_img:hover,
+        .cert_img:focus,
+        .cert_img:active {
+            box-shadow: 0 0 20px 14px #f8f3f39c;
+            /* transform: scale(1.1); */
+            animation: bounce 0.9s;
+        }
+
+        @keyframes bounce {
+
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-20px);
+                opacity: 1;
+            }
+        }
+
+        .right_cont_cert_grid {
+            display: grid;
+            /* Set a fixed size for each column, ensuring consistency */
+            grid-template-columns: repeat(auto, minmax(150px, 2fr));
+            /* or use 1fr for equal distribution */
+            grid-auto-flow: column;
+            grid-gap: 5px;
+            justify-items: stretch;
+            overflow-x: auto;
+            /* Enable horizontal scrolling */
+            /* Ensure the container is wide enough to horizontally scroll */
+            width: 100%;
+            /* Adjust based on your layout */
+            /* Optional: Set a minimum height to ensure grid items are fully visible */
+            min-height: 150px;
+            /* Adjust based on your content */
+        }
+
+        .certi_butn {
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+            display: inline-block;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal__content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 0 10px 10px 10px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 3%;
+        }
+
+        .modal__close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .puff-out-center {
+            animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        }
+
+        @keyframes puff-out-center {
+            0% {
+                transform: scale(1);
+                filter: blur(0px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                filter: blur(4px);
+                opacity: 0;
+            }
+        }
+
+        .modal__close:hover,
+        .modal__close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal__image {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -148,11 +278,11 @@
                             <i class="ri-award-fill nav__icon"></i>
                             Skills</a>
                     </li>
-                    <!-- <li class="nav__item">
-                        <a href="#service" class="nav__link">
+                    <li class="nav__item">
+                        <a href="#certificates" class="nav__link">
                             <i class="ri-briefcase-3-fill nav__icon"></i>
-                            Services</a>
-                    </li> -->
+                            Certificate</a>
+                    </li>
                     </li>
                     <li class="nav__item">
                         <a href="#blog" class="nav__link">
@@ -189,7 +319,7 @@
                         & a Researcher
                     </h1>
                     <p class="home__description" style="font-weight: 500;">
-                        I enjoy researching and developing new things. I am a self-taught developer 
+                        I enjoy researching and developing new things. I am a self-taught developer
                         and I am always looking for new challenges and opportunities to improve myself.
                         I love to make of the web , and combining it with
                         Design and Development to create a unique <b>Experience</b> for the user.
@@ -212,12 +342,12 @@
                             </li>
                             <li class="social__item">
                                 <a href="https://www.instagram.com/prateekkumar321/" class="social__link">
-                                    <box-icon name='instagram' type='logo' color='#999797' ></box-icon>
+                                    <box-icon name='instagram' type='logo' color='#999797'></box-icon>
                                 </a>
                             </li>
                             <li class="social__item">
                                 <a href="https://github.com/praTeek271" class="social__link">
-                                    <box-icon name='github' type='logo' color='#999797' ></box-icon>
+                                    <box-icon name='github' type='logo' color='#999797'></box-icon>
                                 </a>
                             </li>
                             <li class="social__item">
@@ -243,7 +373,8 @@
                         design and I'm always looking out for new sollutions to learn and grow.
                         I'm a self taught developer and I'm always looking for new challenges and opportunities
                         improve myself.</p>
-                    <a href="/assets/PRATEEK_RESUME.pdf" target="_blank" id="link" class="btn btn--primary" style="padding:0;padding-right: 15px;">
+                    <a href="/assets/PRATEEK_RESUME.pdf" target="_blank" id="link" class="btn btn--primary"
+                        style="padding:0;padding-right: 15px;">
                         <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                         <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="hover"
                             colors="primary:#121331,secondary:#9cf4df" style="width: 59px;height: 50px;">
@@ -410,8 +541,8 @@
 
                 <div class="portfolio__project">
                     <div class="portfolio__overlay"></div>
-                    <img src="assets/img/adven_proj.gif" style="width: 350px;height: 350px;" alt="Mobile App UI/UX Design "
-                        class="portfolio__img">
+                    <img src="assets/img/adven_proj.gif" style="width: 350px;height: 350px;"
+                        alt="Mobile App UI/UX Design " class="portfolio__img">
                     <div class="portfolio__info">
                         <div class="portfolio__info-wrapper">
                             <h3 class="portfolio__title">PC UI/Game using Python PyGame framework</h3>
@@ -601,9 +732,103 @@
                 </div>
             </div>
         </section>
+
+        <!-- ======================certification====================== -->
+        <section id="certificates" class="certificates section">
+            <div class="section__header container">
+                <div class="section__header container">
+                    <h2 class="about__description" style="
+                    background: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+                    background-size: cover;
+                    color: #fff;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    padding: 0;">Here's some cool Certifications of mine , wanna look at them ?</h2>
+                </div>
+            </div>
+            <div class="container certi_grid" style="width: 100%;">
+                <div class="left_container">
+                    <div class="left_cont_info">
+                        <span style="font-family: cursive;font-weight: 500px;"><font color="#7a49fe">Certifications</font> from many platfoems like <a href="www.coursera.com">Coursera </a> <br>other institutes and platforms<font color="#7a49fe">  ..............</font></span>
+                    </div>
+                </div>
+                <div class="right_container">
+                    <div class="right_cont_cert right_cont_cert_grid">
+                        <button onclick="openModal('1.png')" class="certi_butn">
+                            <img src="assets/img/certificates/1.png" alt="Certificate" class="cert_img cert_item">
+                        </button>
+                        <button onclick="openModal('2.png')" class="certi_butn">
+                            <img src="assets/img/certificates/2.png" alt="Certificate" class="cert_img cert_item">
+                        </button>
+                        <button onclick="openModal('3.png')" class="certi_butn">
+                            <img src="assets/img/certificates/3.png" alt="Certificate" class="cert_img cert_item">
+                        </button>
+                        <button onclick="openModal('4.png')" class="certi_butn">
+                            <img src="assets/img/certificates/4.png" alt="Certificate" class="cert_img cert_item">
+                        </button>
+                        <button onclick="openModal('5.png')" class="certi_butn">
+                            <img src="assets/img/certificates/5.png" alt="Certificate" class="cert_img cert_item">
+                        </button>
+                       
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="certificateModal">
+                <div class="modal__content">
+                    <span class="modal__close">&times;</span>
+                    <img src="" alt="Certificate" class="modal__image" id="modal__image">
+                </div>
+            </div>
+            <script>
+
+                // Get the modal
+                var modal = document.getElementById("certificateModal");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("modal__close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.classList.add("puff-out-center");
+                    modal.style.display = "none";
+                    model.classList.remove("puff-out-center");
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.classList.add("puff-out-center");
+                        modal.style.display = "none";
+                        model.classList.remove("puff-out-center");
+
+                    }
+                }
+
+                // When the user clicks on the button, open the modal
+                function openModal(imagePath) {
+                    var modalImg = document.getElementById("modal__image");
+                    var img_path = "assets/img/certificates/" + imagePath;
+                    modalImg.src = img_path; // Set the source of the modal image to the provided path
+                    modal.style.display = "block";
+                }
+            </script>
+
+
+            <!-- ======================certification====================== -->
+
+        </section>
     </main>
 
-    <!--===================== Footer =====================-->
+
+
+
+    <!-- ===================== Footer ===================== -->
     <footer class="footer ">
         <div class="d-grid footer__wrapper container">
             <div class="footer__content">
